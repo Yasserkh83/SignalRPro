@@ -61,5 +61,7 @@ namespace SignalRPro.SignalRHubs
                 await Clients.Client(Context.ConnectionId).SendAsync("RetrieveOldMessageCalled", Messages);
             }
         }
+
+
     }
 }

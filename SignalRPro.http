@@ -1,0 +1,6 @@
+@SignalRPro_HostAddress = http://localhost:5071
+
+GET {{SignalRPro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
