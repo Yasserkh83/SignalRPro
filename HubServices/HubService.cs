@@ -7,16 +7,31 @@ namespace SignalRPro.HubServices
         // A theard-safe dictionary to store the groups each connection is part of:
         public readonly IEnumerable<string> ChatGroups = ["Administrators", "Managers", "Users"];
         public readonly ConcurrentDictionary<string, string> ConnectionGroups = new();
+        //public List<string> GetMembers(string groupName)
+        //{
+        //    List<string> allConnectionIds = [.. ConnectionGroups.Keys];
+        //    List<string> groupMembers = [];
+        //    foreach (var connectionId in allConnectionIds)
+        //    {
+        //        var group = ConnectionGroups.FirstOrDefault(x=>x.Key == connectionId).Value;
+        //        if (Equals(groupName, group)) 
+        //         groupMembers.Add(connectionId);
+        //    }
+        //    return groupMembers;
+        //}
+
         public List<string> GetMembers(string groupName)
         {
-            List<string> allConnectionIds = [.. ConnectionGroups.Keys];
-            List<string> groupMembers = [];
-            foreach (var connectionId in allConnectionIds)
+            List<string> groupMembers = new List<string>();
+
+            foreach (var kvp in ConnectionGroups)
             {
-                var group = ConnectionGroups.FirstOrDefault(x=>x.Key == connectionId).Value;
-                if (Equals(groupName, group)) 
-                 groupMembers.Add(connectionId);
+                if (Equals(groupName, kvp.Value))
+                {
+                    groupMembers.Add(kvp.Key);
+                }
             }
+
             return groupMembers;
         }
 
