@@ -66,3 +66,4 @@ C:\Users\YasserKhatib\source\repos\SignalRPro\SignalRPro\bin\Debug\net8.0\System
 C:\Users\YasserKhatib\source\repos\SignalRPro\SignalRPro\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\YasserKhatib\source\repos\SignalRPro\SignalRPro\bin\Debug\net8.0\SignalRProClient.dll
 C:\Users\YasserKhatib\source\repos\SignalRPro\SignalRPro\bin\Debug\net8.0\SignalRProClient.pdb
+C:\Users\YasserKhatib\source\repos\SignalRPro\SignalRPro\obj\Debug\net8.0\SignalRPro.sourcelink.json
